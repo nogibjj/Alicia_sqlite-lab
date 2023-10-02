@@ -11,9 +11,17 @@ def load(dataset = "data/central-park-raw.csv"):
     conn = sqlite3.connect('Centralpark.db')
     c = conn.cursor()
     c.execute("DROP TABLE IF EXISTS Centralpark")
-    c.execute("CREATE TABLE Centralpark (EST TEXT,Max_TemperatureF INTEGER,Mean_TemperatureF INTEGER,Mean_Humidity REAL,CloudCover INTEGER,Events TEXT)")
+    c.execute("""
+              CREATE TABLE Centralpark (EST TEXT,
+              Max_TemperatureF INTEGER,
+              Mean_TemperatureF INTEGER,
+              Mean_Humidity REAL,
+              CloudCover INTEGER,
+              Events TEXT
+              )
+              """)
     #insert
-    c.executemany("INSERT INTO Centralpark VALUES (?,?, ?, ?, ?)", payload,)
+    c.executemany("INSERT INTO Centralpark VALUES (?,?, ?, ?, ?,?)", payload,)
     conn.commit()
     conn.close()
     return "Centralpark.db"

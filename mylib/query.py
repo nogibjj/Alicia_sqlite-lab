@@ -36,7 +36,7 @@ def general_query(query):
     log_query(f"{query}")
 
 def create_record(
-    Max_TemperatureF,Mean_TemperatureF,Mean_Humidity,CloudCover,Events
+    Max_TemperatureF,Mean_TemperatureF,Mean_Humidity,CloudCover,Events,EST
 ):
     """create example query"""
     conn = sqlite3.connect("Centralpark.db")
@@ -44,10 +44,20 @@ def create_record(
     c.execute(
         """
         INSERT INTO Centralpark 
-        (Max_TemperatureF, Mean_TemperatureF, Mean_Humidity, CloudCover, Events, EST) 
+        (Max_TemperatureF, 
+        Mean_TemperatureF, 
+        Mean_Humidity, 
+        CloudCover, 
+        Events, 
+        EST) 
         VALUES (?, ?, ?, ?, ?, ?)
         """,
-        (Max_TemperatureF, Mean_TemperatureF, Mean_Humidity, CloudCover, Events, EST),
+        (Max_TemperatureF, 
+         Mean_TemperatureF, 
+         Mean_Humidity, 
+         CloudCover, 
+         Events, 
+         EST),
     )
     conn.commit()
     conn.close()

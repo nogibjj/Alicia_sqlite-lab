@@ -13,6 +13,7 @@ from mylib.query import (
     read_data,
 )
 
+
 def handle_arguments(args):
     """add action based on inital calls"""
     parser = argparse.ArgumentParser(description="ETL-Query script")
@@ -39,7 +40,7 @@ def handle_arguments(args):
         parser.add_argument("EST")
 
     if args.action == "create_record":
-        parser.add_argument("Max_TemperatureF",type=int)
+        parser.add_argument("Max_TemperatureF", type=int)
         parser.add_argument("Mean_TemperatureF", type=int)
         parser.add_argument("Mean_Humidity", type=int)
         parser.add_argument("Events")
