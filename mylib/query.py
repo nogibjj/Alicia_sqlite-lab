@@ -36,7 +36,7 @@ def general_query(query):
     log_query(f"{query}")
 
 def create_record(
-    Max_TemperatureF,Mean_TemperatureF,Mean_Humidity,CloudCover,Events,EST
+    Mean_TemperatureF,Mean_Humidity,CloudCover,Events,EST
 ):
     """create example query"""
     conn = sqlite3.connect("Centralpark.db")
@@ -44,15 +44,15 @@ def create_record(
     c.execute(
         """
         INSERT INTO Centralpark 
-        (Max_TemperatureF, 
+        (
         Mean_TemperatureF, 
         Mean_Humidity, 
         CloudCover, 
         Events, 
         EST) 
-        VALUES (?, ?, ?, ?, ?, ?)
+        VALUES (?, ?, ?, ?, ?)
         """,
-        (Max_TemperatureF, 
+        (
          Mean_TemperatureF, 
          Mean_Humidity, 
          CloudCover, 
@@ -65,9 +65,9 @@ def create_record(
     # Log the query
     log_query(
         f"""INSERT INTO Centralpark VALUES (
-            {Max_TemperatureF}, 
             {Mean_TemperatureF}, 
             {Mean_Humidity}, 
+            {CloudCover},
             {Events},
             {EST},);"""
     )
@@ -81,15 +81,15 @@ def update_record(
     c = conn.cursor()
     c.execute(
         """
-        UPDATE ServeTimesDB 
-        SET Max_TemperatureF=?, 
-        Mean_TemperatureF=?, 
+        UPDATE Centralpark 
+        SET Mean_TemperatureF=?, 
         Mean_Humidity=?, CloudCover=?, 
         Events=?, 
-        WHERE EST=?
+        EST = ?,
+        WHERE Max_TemperatureF=?
         """,
         (
-            Max_TemperatureF, Mean_TemperatureF, Mean_Humidity, CloudCover, Events, EST,
+            Mean_TemperatureF, Mean_Humidity, CloudCover, Events, EST, Max_TemperatureF
         ),
     )
     conn.commit()

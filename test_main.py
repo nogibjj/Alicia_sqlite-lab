@@ -36,12 +36,12 @@ def test_extract():
 #             "python",
 #             "main.py",
 #             "update_record",
-#             "48",
-#             "37",
+#             "30",
 #             "20",
 #             "8",
 #             "Rain",
 #             "2006-1-30",
+#             "57",
 #         ],
 #         capture_output=True,
 #         text=True,
@@ -53,7 +53,7 @@ def test_extract():
 # def test_delete_record():
 #     """tests delete_record"""
 #     result = subprocess.run(
-#         ["python", "main.py", "delete_record", "1"],
+#         ["python", "main.py", "delete_record", "37"],
 #         capture_output=True,
 #         text=True,
 #         check=True,
@@ -88,7 +88,7 @@ def test_extract():
 #             "python",
 #             "main.py",
 #             "general_query",
-#             "SELECT * FROM Centralpark WHERE server = '37'",
+#             "SELECT * FROM Centralpark WHERE Max_TemperatureF = '37'",
 #         ],
 #         capture_output=True,
 #         text=True,

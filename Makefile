@@ -42,8 +42,8 @@ generate_and_push:
 extract:
 	python main.py extract
 
-transform_load: 
-	python main.py transform_load
+# transform_load: 
+# 	python main.py transform_load
 
-query:
-	python main.py general_query "SELECT * FROM entral-park-raw WHERE server='CentralPark';"
+# query:
+# 	python main.py general_query "SELECT * FROM entral-park-raw WHERE Max='CentralPark';"

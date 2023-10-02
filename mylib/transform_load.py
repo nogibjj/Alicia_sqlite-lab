@@ -12,17 +12,29 @@ def load(dataset = "data/central-park-raw.csv"):
     c = conn.cursor()
     c.execute("DROP TABLE IF EXISTS Centralpark")
     c.execute("""
-              CREATE TABLE Centralpark (EST TEXT,
+              CREATE TABLE Centralpark (,
               Max_TemperatureF INTEGER,
               Mean_TemperatureF INTEGER,
               Mean_Humidity REAL,
               CloudCover INTEGER,
-              Events TEXT
+              Events TEXT,
+              EST TEXT
               )
               """)
     #insert
-    c.executemany("INSERT INTO Centralpark VALUES (?,?, ?, ?, ?,?)", payload,)
+
+    c.executemany(
+        """
+        INSERT INTO Centralpark(
+            Mean_TemperatureF, 
+            Mean_Humidity,
+            CloudCover, 
+            Events,
+            EST
+            ) 
+            VALUES (?, ?, ?, ?, ?)""",
+        payload,
+    )
     conn.commit()
     conn.close()
     return "Centralpark.db"
-

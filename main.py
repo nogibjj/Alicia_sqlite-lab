@@ -32,17 +32,17 @@ def handle_arguments(args):
     args = parser.parse_args(args[:1])
     print(args.action)
     if args.action == "update_record":
-        parser.add_argument("Max_TemperatureF", type=int)
         parser.add_argument("Mean_TemperatureF", type=int)
         parser.add_argument("Mean_Humidity", type=int)
         parser.add_argument("CloudCover", type=int)
         parser.add_argument("Events")
         parser.add_argument("EST")
+        parser.add_argument("Max_TemperatureF", type=int)
 
     if args.action == "create_record":
-        parser.add_argument("Max_TemperatureF", type=int)
         parser.add_argument("Mean_TemperatureF", type=int)
         parser.add_argument("Mean_Humidity", type=int)
+        parser.add_argument("CloudCover", type=int)
         parser.add_argument("Events")
         parser.add_argument("EST")
 
