@@ -32,5 +32,19 @@ will have to change for it, that will cost a lot of labor.
 I used copilot, I think the prompt code it generate is really helpful even I am in different document, it still can follow my thought,
 that's really amazing.
 
-Screenshot 2023-10-01 at 10.59.47 PM.png
+#### Here is my .lib file
 
+I seperate the action into 4 parts to help me do CRUD wth SQL
+
+<img width="248" alt="Screenshot 2023-10-01 at 10 59 47 PM" src="https://github.com/nogibjj/IDS706_Alicia_miniproject2/assets/143651934/5d3cda63-d594-482e-be0e-f9c520be6f16">
+
+#### Extract the file
+
+<img width="685" alt="Screenshot 2023-10-01 at 11 16 34 PM" src="https://github.com/nogibjj/IDS706_Alicia_miniproject2/assets/143651934/fe33e81a-96b8-4847-86a5-820c8eda9ad2">
+
+#### Create a function
+
+`Create_Records` to create records in database
+`Update_Records` to change the contents in each column
+`Delete_Records` to delete the records in database
+`Read_Data` to read the file into database
