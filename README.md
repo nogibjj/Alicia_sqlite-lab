@@ -32,5 +32,5 @@ will have to change for it, that will cost a lot of labor.
 I used copilot, I think the prompt code it generate is really helpful even I am in different document, it still can follow my thought,
 that's really amazing.
 
-![Alt text](Screenshot 2023-10-01 at 10.59.47 PM.png)
+Screenshot 2023-10-01 at 10.59.47 PM.png
 
