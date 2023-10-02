@@ -1,3 +1,4 @@
+[![CI](https://github.com/nogibjj/Alicia_miniProject5/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/Alicia_miniProject5/actions/workflows/cicd.yml)
 ## SQLite Lab
 
 ### Goal:
