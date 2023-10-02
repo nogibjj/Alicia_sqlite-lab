@@ -45,6 +45,16 @@ I seperate the action into 4 parts to help me do CRUD wth SQL
 #### Create a function
 
 `Create_Records` to create records in database
+<img width="438" alt="Screenshot 2023-10-01 at 11 40 35 PM" src="https://github.com/nogibjj/IDS706_Alicia_miniproject2/assets/143651934/121e0e67-14ad-4648-aed2-7fb55e55727b">
+
 `Update_Records` to change the contents in each column
+<img width="664" alt="Screenshot 2023-10-01 at 11 40 47 PM" src="https://github.com/nogibjj/IDS706_Alicia_miniproject2/assets/143651934/2653a99a-d92f-488b-9cba-f0b65b7b4c6a">
+
 `Delete_Records` to delete the records in database
 `Read_Data` to read the file into database
+
+<img width="655" alt="Screenshot 2023-10-01 at 11 40 54 PM" src="https://github.com/nogibjj/IDS706_Alicia_miniproject2/assets/143651934/c4a457ec-ecae-47d0-a485-0de4eda9f886">
+
+#### Log the SQL query
+
+<img width="550" alt="Screenshot 2023-10-01 at 11 43 15 PM" src="https://github.com/nogibjj/IDS706_Alicia_miniproject2/assets/143651934/7140d883-9132-455e-8854-aee1c18fb8be">
